@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .pink {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="pink">按鈕1</button>
+    <button>按鈕2</button>
+    <button>按鈕3</button>
+    <button>按鈕4</button>
+    
+    <!-- 做出點選按鈕，按鈕變色的效果 -->
+    <script>
+        // 操作所有按鈕
+        let bts = document.querySelectorAll('button')
+        for (let i = 0; i < bts.length; i++) {
+            bts[i].addEventListener('click', function () {
+                document.querySelector('.pink').className = ''
+                this.className = 'pink'
+            })
+        }
+    </script>
+
+</body>
+
+</html>

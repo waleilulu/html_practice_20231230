@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Strings and Escape Character</h4>
+    <p><a href="https://www.w3schools.com/js/js_strings.asp">https://www.w3schools.com/js/js_strings.asp</a></p>
+
+    <script>
+
+        // 請觀察底下的變數透過等號設定值後，
+        // 透過變數名稱再次取出，會得到什麼結果?
+
+        // 1. 代表字串可以用""或''，在console會看到"C"
+        var str = '"C"'
+        console.log(str)
+
+        // 2. 只看到C:aemp，所以\自己會消失，跳脫字元(escaping character)。
+        var str2 = "C:\aemp";
+        console.log(str2)
+        
+        // 3. Uncaught ReferenceError: 因為str4沒有宣告
+        var str3 = str4;
+        console.log(str3)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Array Methods</h4>
+    <p><a href="http://www.w3schools.com/js/js_array_methods.asp">http://www.w3schools.com/js/js_array_methods.asp</a></p>
+
+    <script>
+        var weekList = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"];
+
+        // 10. 陣列的取值和長度
+
+        console.log(weekList.length);//length會出現數字，7
+
+        // 12. 陣列.toString()
+        console.log(weekList.toString());//toString()的()裡面不用書寫<-提示框裡面沒有要求。得到sunday,monday,tuesday,wednesday,thursday,friday,saturday
+
+        // 13. 陣列.join("#")
+        console.log(weekList.join("#"));//用#去分隔，sunday#monday#tuesday#wednesday#thursday#friday#saturday
+        
+        // 14. 移除陣列中第一份資料
+        console.log(weekList.shift());//sunday (告訴我他移除了誰:sunday)
+        
+        weekList.shift();//接續著上一個，再移除monday
+        console.log(weekList);//第一條已經刪掉了sunday剩下1~6，第二條刪掉monday，剩下2~6，(5) ['tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+
+
+        // 15. 移除陣列中最後一份資料
+        weekList.pop();//pop移除陣列最後一個
+        console.log(weekList);//(4) ['tuesday', 'wednesday', 'thursday', 'friday']
+
+        // 16. 有哪三種(以上)方式可以加入資料到陣列中?
+
+        // 第一種
+        console.clear();//把前面的資料都清除了，不用很複雜的找資料
+        var x=weekList.unshift("apple");
+        console.log(x);//apple加入之後有幾個在陣列裡
+        console.log(weekList);//(5) ['apple', 'tuesday', 'wednesday', 'thursday', 'friday']
+
+        //第二種
+        weekList.push("bee");//加入在陣列最尾
+        console.clear();//把前面的資料都清除了，不用很複雜的找資料
+        console.log(weekList);//(6) ['apple', 'tuesday', 'wednesday', 'thursday', 'friday', 'bee']
+
+        //第三種
+        weekList[6]="cat";//在第六序位加入cat
+        console.log(weekList);//(7) ['apple', 'tuesday', 'wednesday', 'thursday', 'friday', 'bee', 'cat']
+
+        weekList[weekList.length]="dog";//在陣列最尾直接加入dog
+        console.log(weekList);//(8) ['apple', 'tuesday', 'wednesday', 'thursday', 'friday', 'bee', 'cat', 'dog']
+
+        console.clear();//把前面的資料都清除了，不用很複雜的找資料
+        // 20. 二維陣列的長度
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];//兩個陣列[0]為第一個陣列
+        console.log(poker.length);//1
+        console.log(poker[0].length);//13
+
+
+    </script>
+</body>
+
+</html>

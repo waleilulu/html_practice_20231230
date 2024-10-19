@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+        2023.12.01
+        1. JavaScript可以寫在: script標籤裡面跟事件裡面
+    </pre>
+    <!-- 10. 於網頁放置一顆 按鈕(A) -->
+    <!-- 15. 測試加入滑鼠點擊事件(onclick)，並直接呼叫 console.log()，到網頁右鍵打開檢查，console -->
+    <button onclick="console.log(123)">按鈕(A)</button>
+
+
+    <!-- 20. 於網頁放置一顆 按鈕(B) ，也加入點擊事件，事件中執行指定的 function: btnClick -->
+    <!-- 25. function內容：在 console 顯示一段文字 -->
+    <button onclick="cat()">按鈕(B)</button>
+    <script>
+        function cat(){
+            console.log(456)
+        }
+    </script>
+    
+
+    <!-- 當點擊按鈕 A 時，將在控制台中看到 123，而當您點擊按鈕 B 時，將看到 456。這是使用 onclick 事件來觸發 JavaScript 行為的基本例子。 -->
+</body>
+
+</html>

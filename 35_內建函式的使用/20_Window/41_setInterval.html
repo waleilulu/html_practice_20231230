@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>指定的秒數，做指定的事情</h4>
+    <p><a
+            href="https://www.w3schools.com/jsref/met_win_setinterval.asp">https://www.w3schools.com/jsref/met_win_setinterval.asp</a>
+    </p>
+
+    <script>
+        var cnt = 0;
+
+        function apple() {
+            cnt += 1;
+            console.log(` apple() ==>  ${cnt} `);
+        }
+        apple();//1
+        apple();//2
+        apple();//3
+
+        var a = 123;// 數字物件
+        var b ="";//字串物件
+        var c ='';//字串物件
+        var d =``;//字串 ${}
+        var e =[];//陣列物件,
+        var f ={};//物件
+        var g = true; //布林值
+        var h = false; //布林值
+
+        //另外一種宣告函式的方式
+        // var i = founction(){};//函式
+
+        // 10. 放入  apple
+        //機器人在一秒鐘到的時候才把小括弧放上去
+        // setInterval(apple, 1000);//成功
+
+
+        // 20. 放入 'apple()'
+        // setInterval('apple()',1000);//成功=>技術上可行
+
+
+        // 30. 放入  apple()
+        setintervalapple(apple(),1000);//失敗，因為setintervalapple(undefined, 1000)
+        
+        
+        // 40. 呼叫 setInterval 時改為直接放入 function 
+        // setInterval()function(){
+        //     cnt=+1;
+        //     console.log(`皮卡丘==>${cnt}`);
+        // } ,5000); ???????????????????????????????
+
+        
+
+    </script>
+</body>
+
+</html>

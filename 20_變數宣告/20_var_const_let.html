@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    
+    <h3>JavaScript Versions：<a href="https://www.w3schools.com/js/js_versions.asp">https://www.w3schools.com/js/js_versions.asp</a></h3>
+    <h3>ECMAScript 5 - 2009：<a href="https://www.w3schools.com/js/js_es5.asp">https://www.w3schools.com/js/js_es5.asp</a></h3>
+    <h3>ECMAScript 6 - 2015：<a href="https://www.w3schools.com/js/js_es6.asp">https://www.w3schools.com/js/js_es6.asp</a></h3>
+    
+    <h3>JavaScript Let：<a href="https://www.w3schools.com/js/js_let.asp">https://www.w3schools.com/js/js_let.asp</a></h3>
+    <h3>JavaScript Const：<a href="https://www.w3schools.com/js/js_const.asp">https://www.w3schools.com/js/js_const.asp</a></h3>
+    
+    <script>
+        // 10. var、let、const 宣告變數的方法
+        var x = 1;
+        let y = 2;
+        const z = 3;
+
+        console.log(x);
+        console.log(y);
+        console.log(z);
+    
+        // 20. const 變數宣告並給值後是否還能修改?
+        // 第一天的結論是:宣告給值之後不能修改
+        // 第N天的結論是:在000的情況下看起來可以改
+        // const 用來聲明常量，其值在聲明後不能被修改。在這個例子中，z 是一個常量，它的值被固定為 3，被固定成3之後就不能改。
+        // z = 100;
+        // console.log(100);
+        
+        
+        // 30. 在 if 判斷句中，透過 var、let 宣告兩個變數，並觀察他們的作用域
+        // 判斷真的假的=>布林值=>true false if(){}
+        // function 名字(){}
+        //       if(){}
+        if(true) {
+            var cat = 5566
+            let dog =7788
+            console.log(cat);//5566
+            console.log(dog);//7788
+        }
+        console.log(cat);//5566
+        //console.log(dog);//x
+                   
+        // 40. 測試 var 宣告相同的變數名稱=> 後蓋前
+        // 50. 測試 let 宣告相同的變數名稱=> 有錯誤
+        var zoo = 999;
+        var zoo = 555;
+        console.log(zoo); //
+        
+    </script>
+</body>
+
+</html>

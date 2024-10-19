@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <pre>
+【分解動作】
+=>需要按鈕
+    ->按鈕有事件
+    ->有事件就會有函式
+    ->函示有沒有參數? 無
+    ->函示要做什麼?
+        >找到文字
+        >放大文字
+            - 放大 = ??              +一點點
+            - 放大 = 現在的字型大小   +一點點
+
+</pre>
+    <button id="egg" onclick="zoomIn()">【方法一】放大文字</button>
+    <hr>
+    <p id="apple" style="font-size: 18px;">皮卡丘</p>
+    <script>
+        
+        function zoomIn() {
+        // 方法一
+            var x = document.getElementById('apple').style.fontSize;
+            console.log(x);//16px
+           
+            var temp=parseInt(x)+2+"px";
+            console.log(temp);//18px
+
+            document.getElementById('apple').style.fontSize=temp;
+        }
+
+    </script>
+</body>
+
+</html>

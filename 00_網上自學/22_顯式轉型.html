@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <script>
+        // let str = '123' // string
+        // console.log(str) //123，字串(黑色)
+        // console.log(Number(str)) //123，從字串轉換成數字型(藍色)
+        // console.log(Number('apple')) //NaN
+
+        // let num = prompt('輸入年薪')
+        // console.log(num) //500000，字串(黑色)
+        // console.log(Number(num)) //500000，從字串轉換成數字型(藍色)
+
+        // // 也可以這樣寫:
+        // let num1 = Number(prompt('輸入年薪'))
+        // console.log(num1) //500000，從字串轉換成數字型(藍色)
+
+        // // 也可以這樣寫(隱性轉型):
+        // let num3 =+prompt('輸入年薪')
+        // console.log(num3) //500000，從字串轉換成數字型(藍色)
+
+
+        // parseInt： 用於將字串轉換為整數（整數型別）。
+        console.log(parseInt('12px')) //12
+        console.log(parseInt('12.34px')) //12
+        console.log(parseInt('12.95px')) //12
+        console.log(parseInt('abc12.95px')) //NaN
+
+
+        // parseFloat： 用於將字串轉換為浮點數（小數點數字型別）。
+        console.log(parseFloat('12px')) //12
+        console.log(parseFloat('12.34px')) //12.34
+        console.log(parseFloat('12.95px')) //12.95
+        console.log(parseFloat('abc12.95px')) //NaN
+
+
+    </script>
+</body>
+
+</html>

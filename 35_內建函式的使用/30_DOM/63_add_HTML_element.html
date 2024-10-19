@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <img src="../../image/find.png" alt="">
+    <script>
+        // 20. createElement 增加一個元素 (img)
+        // 21. setAttribute  設定新增元素的屬性
+        // 22. appendChild   直接在Html文件中增加元素
+        setInterval(function () {
+            var x = document.createElement("img");//<img>
+            var fish = 0;
+            fish++;
+            x.setAttribute('src', "../../image/find.png");//<img src=>
+            x.setAttribute('id', 'cat' + fish);
+            document.body.appendChild(x);
+        }, 1000)
+
+    </script>
+
+</body>
+
+</html>

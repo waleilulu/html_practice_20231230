@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Arrays</h4>
+    <p><a href="http://www.w3schools.com/js/js_arrays.asp">http://www.w3schools.com/js/js_arrays.asp</a></p>
+
+    <p>陣列使用時機：相同的資料型態（雖然 JavaScript 可以不需要相同，但還是盡量避免）</p>
+    <p>具有一致的意義(收集大家的名字、年紀)、需要參與同樣的運算</p>
+    <p>陣列就像置物櫃一樣，透過index，可以存放物品，可以取出</p>
+
+    <script>
+        // 10. 什麼時候我們需要一個陣列？
+        // 20. 該怎麼樣宣告一個陣列？
+        var apple = [];//看到 []，所以apple是個陣列
+        var bee = {};//看到 {}，所以bee是個陣列
+
+        // 25. 該怎麼把東西放進去？
+        var MSIT56 = ["酷斯拉", "小火龍", "皮卡丘", "胖丁"];
+        console.log(MSIT56)//使用Chrome瀏覽器會先出現Array(4)，重新整理變成(4) ['酷斯拉', '小火龍', '皮卡丘', '胖丁']
+        //[]index 索引值 (類似置物櫃的號碼)
+        console.log(MSIT56[1]);//序號0號是酷斯拉，1號是酷斯拉
+
+        MSIT56[0]="酷酷拉";
+        console.log(MSIT56);//(4) ['酷酷拉', '小火龍', '皮卡丘', '胖丁']，序號0號的酷斯拉改名成酷酷拉
+
+        MSIT56[5]="阿寶";
+        console.log(MSIT56);//(6) ['酷酷拉', '小火龍', '皮卡丘', '胖丁', empty, '阿寶']，把阿寶排到序號五，中間序號4為empty
+
+
+
+        // 30. 陣列中的陣列
+        var temp = [["apple", "bee", "cat"], ["dog", "egg"]]
+        console.log(temp);//(2) [Array(3), Array(2)]
+        console.log(temp[1][0]);//在序號1["dog", "egg"]裡面取序號0，取到dog
+
+        // 40. 如果要取得 poker陣列 裡面的13，要如何取得?
+        var poker = [];
+        poker[0] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+        console.log(poker[0][12]);//13，如果要13，只有一個陣列(想像成一個長格子)不需要切刀[0]，的序號12
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Operators</h4>
+    <p><a href="https://www.w3schools.com/js/js_operators.asp">https://www.w3schools.com/js/js_operators.asp</a></p>
+
+    <script>
+
+        // // // 算術運算子：四則運算、取餘數 (%) 等
+        var a = 10;
+        var b = 3;
+
+        // 10. 取餘數 %
+        console.log(a%b);//1
+
+        console.clear()
+
+        // // // 11. ++變數  和  變數++ 
+        var apple=1;
+
+        // // // apple=apple+1;
+        // // // apple+=1;
+        // // // apple++; 
+        // // //以上三種寫法是一樣的就是+1
+
+        // // // ++變數: 先加 =>console.log(++apple) 結果等於2
+        // // // 變數++: 等一下再加 =>console.log(apple++) 結果等於1
+
+        console.log(apple);
+
+        console.clear()
+
+        // 比較運算子：評估條件，回傳 true 或者 false 值
+        var x = 10;
+        var y = "10";
+        var z = 5;
+
+
+        // 20. == 和 === 的差異在?
+        var cat = x==y;
+        var dog = x===y;
+        console.log(cat); //true
+        console.log(dog); //false
+
+
+        // 21. 測試 2 > 1
+
+        // 22. 測試 1 < 2 < 3 和 3 > 2 > 1
+
+        // 23. 測試 true == 1 還有 false == 0 
+
+        console.log(2>1);//true
+        console.log(1<2<3);//true
+        console.log(3>2>1);//false，先比較3>2結果為是，True=1>1為否，所以答案是false
+        console.log(true==1);//true
+        console.log(false==0);//true
+    
+
+        
+        console.clear()
+        // 邏輯運算子
+        // 30. 不等於的寫法 (!=)
+        console.log(5!=3);//true
+
+        console.clear()
+        // 40. and (&&) 條件需要同時成立的時候
+        //舉例: email==密碼，正確資料要同時成立才能登入。
+
+
+        // 50. or (||) 條件擇一成立
+        //舉例: 中午吃飯||中午吃麵，選擇一個。
+
+
+        // 70. 三元運算子 (condition) ? value1:value2
+        
+        // if
+        var x=prompt("輸入0~100的數字");
+        if(x>=60) alert("及格!");
+
+        // if...else
+        // 第一種寫法:
+        var zoo=1>100?"台中動物園":"高雄動物園2";
+        if(1>100){
+            zoo="台中動物園"
+        }else{
+            zoo="高雄動物園2"
+        }
+        console.log(zoo);
+
+        // 第二種寫法:
+        var egg=2>100? 123:456;
+        console.log(egg);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <pre>
+        <!-- <option value=""></option> -->
+    </pre>
+    
+    <label for="userName">名字</label>
+    <input id="userName" type="text">
+    <hr>
+    <button onclick="getUserName()">取得名字</button>
+    <hr>
+    <p id="dog"></p>
+    <script>
+        function getUserName() {
+            dog.innerText=userName.value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>2023.12.01 ID不可以重複，得證。</pre>
+    
+    <h4 id="apple">皮卡丘</h4>
+    <h4 id="apple">胖丁</h4>
+    <p><a href="https://www.w3schools.com/jsref/dom_obj_document.asp">https://www.w3schools.com/jsref/dom_obj_document.asp</a></p>
+    
+    <script>
+        // 10. 底下程式碼請逐一取消註解(ctrl+/)，並查看結果
+        console.log(document);//代表整份HTML
+        console.log(document.head); //head部分
+        console.log(document.body.h4);//h4不是body的直接屬性所以不能用，要改成下面那種方式
+        console.log(document.getElementById("apple"));
+
+    </script>
+
+</body>
+
+</html>

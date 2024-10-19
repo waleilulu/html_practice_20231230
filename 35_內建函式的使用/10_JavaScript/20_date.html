@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>JavaScript Date Objects</h4>
+    <p><a href="https://www.w3schools.com/js/js_dates.asp">https://www.w3schools.com/js/js_dates.asp</a></p>
+    <h4>JavaScript Get Date Methods</h4>
+    <p><a href="https://www.w3schools.com/js/js_date_methods.asp">https://www.w3schools.com/js/js_date_methods.asp</a>
+    </p>
+    <hr>
+    <pre>
+    生成日期物件的方法：
+        new Date()
+        new Date(milliseconds)
+        new Date(dateString)
+        new Date(year, month, day, hours, minutes, seconds, milliseconds)
+    </pre>
+
+    <script>
+        // // 宣告一個日期物件
+        var d = new Date();//Date()括號裡沒有寫就是預設值
+        console.log(d);
+        // var a = 123;// 數字物件
+        // var b ="";//字串物件
+        // var c ='';//字串物件
+        // var d =``;//字串 ${}
+        // var e =[];//陣列物件,
+        // var f ={};//物件
+        // var g = true; //布林值
+        // var h = false; //布林值
+        // //------------------------------
+
+
+        // 取得年份
+        console.log(d.getFullYear());//2023
+
+        // 取得月份 (請注意這裡)
+        console.log(d.getMonth());//11 (請注意12月以11代表)
+
+        // 取得日期
+        console.log(d.getDate());//6 (請注意年份沒-1顯示出來是11)
+
+        // 取得星期 (請注意這裡)
+        // 取得時間
+        // 取得分鐘
+        console.log(d.getDay());//3 (星期三)
+        console.log(d.getHours());//9 (9點)
+        console.log(d.getMinutes());//13 (13分)
+
+        console.clear();
+        var apple = new Date();
+        var bee = apple.getFullYear()
+        console.log(bee);
+
+
+        // 若日期物件生成後，我們需要加一天
+        var cat = new Date();
+        console.log(cat);//12/6
+        cat.setDate(cat.getDate() + 1);//12/7
+        console.log(cat);
+        // 明天=今天+1
+        // 下個月=這個月+1
+
+        // 若日期物件生成後，我們需要加一個月
+        var cat = new Date();
+        console.log(cat);//12/6
+        cat.setDate(cat.getDate() + 1);//12/7
+        cat.setMonth(cat.getMonth() + 1);//1/07
+        console.log(cat);
+
+        console.clear();
+        // 小練習：如何透過日期的加減，取得這個月的最後一天?
+        // 這個月的最後一天=下個月的1號-1
+        // 設定日期為下個月的第一天
+        var dog=new Date();
+        dog.setDate(1);//1號
+        dog.getMonth(dog.getMonth()+1);//下個月
+        dog.setDate(dog.getDate()-1);//一號減1
+        console.log(dog);
+        
+
+        // 小練習：宣告兩個日期物件，並指定日期後，進行日期相減
+        // millisecondc毫秒 = 86400000 一天 = 1000*60*60*24
+
+        var d1=new Date();
+        var d2=new Date("2023-12-15");
+        var diff = d2-d1;
+        console.log(diff);//770815234
+        console.log(diff/86400000);//8.921472615740742
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <!-- <button onclick="bee(this)">1</button>
+    <button onclick="bee(this)">2</button>
+    <button onclick="bee(this)">3</button> -->
+
+    <pre>  
+    發生 事情/事件 的時候，會有對應的OOO事件物件
+    this 關鍵字代表什麼意思，取決於你在哪裡使用他
+
+    </pre>
+    <button onkeydown="bee(this)">1</button>
+    <button onkeydown="bee(this)">2</button>
+    <button onkeydown="bee(this)">3</button>
+  
+
+    <script>
+        // function bee(data) {
+        //     console.log('測試新東西');  
+        //     console.log(data.innerText); // 當點擊2，就會把<button onclick="bee(this)">2</button>整串輸出。若只要看到2，需要輸入.innerText
+        //     console.log('測試新東西');            
+        // }
+
+        function bee(data) {
+            console.log('測試新東西');  
+            console.log(data); // 當點擊2，就會把<button onclick="bee(this)">2</button>整串輸出。若只要看到2，需要輸入.innerText
+            console.log('測試新東西');            
+        } 
+    </script>
+</body>
+</html>

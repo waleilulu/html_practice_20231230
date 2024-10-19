@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <pre>
+        如果#cat的src是放大鏡(find.png)
+        我就要改成比個讚(like.png)
+
+        如果#cat的src是比個讚(like.png)
+        我就要改成放大鏡(find.png)
+
+
+    </pre>
+    <h3>點選圖片後，置換成另外一張圖片</h3>
+
+    <!-- 10. 設定一張圖片 -->
+    <img id="cat" onclick="dog()" src="../../image/find.png" alt="">
+
+    <script>
+
+        // 11. 取得上一個步驟的圖片
+
+        // 20. 設定點選圖片後，換成另外一張圖片
+        // function dog() {
+        //     document.getElementById('cat').src = "../../image/like.png"
+        // }
+
+        // 30.  如何第一張點選變第二張圖片，第二章點選變第一張，如此重複
+        // function dog() {
+        //     var imgElement = document.getElementById('cat');
+        //     if (imgElement.src.includes('find.png')) {
+        //         imgElement.src = "../../image/like.png";
+        //     } else {
+        //         imgElement.src = "../../image/find.png";
+        //     }
+        // }
+
+
+        // // 老師講解 2:
+        // function dog() {
+        //     var img_path = document.getElementById('cat').src;
+        //     console.log(img_path);//是一個字串
+
+        //     document.getElementById('cat').src =
+        //         (img_path.indexOf("find") >= 0) ? "../../image/like.png" : "../../image/find.png";
+        // }
+
+
+        // 老師講解 1:
+        function dog() {
+            var img_path = document.getElementById('cat').src
+            var x = img_path.indexOf("find");
+
+            if (x >= 0) {
+                document.getElementById('cat').src = "../../image/like.png";
+            } else {
+                document.getElementById('cat').src = "../../image/find.png";
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

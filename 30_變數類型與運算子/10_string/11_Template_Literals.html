@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+    <h1 id="cat"></h1>
+    <script>
+        // 10. 產生字串，並顯示到控制台
+        var msg1="1. 今天天氣很冷，我想吃麻油雞麵線當晚餐";
+        console.log(msg1)
+       
+        // 20. 透過加號(+)串接變數和字串，並顯示到控制台
+        var food="麻油雞麵線";
+        var weather="很冷";
+        var meal="晚餐";
+        var msg2="2. 今天天氣"+weather+"，我想吃"+food+"當"+meal
+        console.log(msg2)
+        
+        
+        // 21. ``反引號Template Literals：中文翻譯為 樣板字面值、模板字串等，用 「` `」組成，按鍵1旁邊。也可以用反引號，裡面關鍵字用${宣告的字}作替代
+        var msg3=`3. 今天天氣${weather}，我想吃${food}當${meal}`;
+        console.log(msg3)
+     // 在字串裡面放變數用``反引號比較好
+
+
+
+        document.getElementById('cat').innerText=msg3
+        // 複習檔案夾10_JavaScript裡面的30、31
+
+   
+
+    </script>
+
+</body>
+
+</html>

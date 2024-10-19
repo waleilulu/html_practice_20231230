@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+    <button id="btn4">4</button>
+    <button id="btn5">5</button>
+    <button id="btn6">6</button>
+    <script>
+        function cat() {
+            console.log('測試新東西-第二回合');
+            
+        }
+        //方法A
+        // document.getElementById('btn4').addEventListener('click', cat());//不可行
+        
+        //方法B
+        // document.getElementById('btn4').addEventListener('click', cat); //可行
+
+        //方法C
+        document.getElementById('btn4').addEventListener('click', function () {
+            console.log('神奇寶貝')
+        }); //可行
+    </script>
+</body>
+</html>

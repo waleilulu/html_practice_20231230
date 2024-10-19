@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+let 和 var的區別:
+在較舊的javascript，使用關鍵字var來宣告變數，而不是let。
+var現在開發鐘一班不再使用它，只是我們可能在老伴程序中看到它。
+let為了解決var的一些問題。
+
+結論:
+var就是bug，以後統一宣告用let
+
+<script>
+// var宣告:
+// 1. 可以先使用 再宣告(不合理)
+    // console.log(num)
+    // var num = 10 //undifined，沒有報錯
+
+    // num = 10
+    // console.log(num)
+    // var num //10，第一句沒有宣告變數
+
+    // num = 10
+    // console.log(num)
+    // let num // 報錯Uncaught ReferenceError: Cannot access 'num' before initialization
+
+// 2. var宣告過的變數可以重複宣告(不合理)
+    // var num = 10
+    // var num = 20
+    // console.log(num) // 20，多次宣告
+
+    // let num = 10
+    // let num = 20
+    // console.log(num)// 報錯Uncaught ReferenceError: Cannot access 'num' before initialization
+
+    
+
+// 3. 譬如變數提升、全局變數、沒有區塊層級等等
+
+
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- 10. 底下有兩段被註解掉的程式碼
+             請分別取消註解，並觀察
+             <p> 標籤的內容是否會被改變？ -->
+
+
+    <!-- <script>
+        document.getElementById('demo').innerText = "測試一號";
+    </script>  
+    優點：script在head加載時立即下載和執行。可以在頁面的開始部分定義全域變數和函數，這樣整個頁面都可以使用。
+    缺點：可能會導致頁面加載速度變慢，因為腳本的下載和執行會阻塞 HTML 的解析。
+    -->
+
+
+</head>
+
+<body>
+
+    <p id="demo"> 測試文字 </p>
+
+
+    <script>
+        document.getElementById('demo').innerText = "測試二號";
+    </script>
+
+    <!-- 將 <script> 放在 <p> 標籤的後面是為了確保在試圖選擇和修改 id 為 "demo" 的元素之前，該元素已經被解析並添加到 DOM（文檔物件模型）中。 
+        綜合考慮，通常建議將非必要的腳本放在頁面底部，這樣可以最大程度地減少對頁面加載的影響
+    -->
+
+</body>
+
+</html>

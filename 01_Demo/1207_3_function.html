@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <script>
+        // //宣告有兩種方式
+        // //方法A: function 名稱(){}，輸入funciton後面有個方格子按下去，直接帶入        
+        // function apple() {
+        //     console.log('月亮');
+        // }
+        // apple();
+
+        // //方法B: var 名稱 = function(){}
+        // var bee = function(){
+        //     console.log('太陽');
+        // }
+        // bee();
+
+
+        var apple = 100
+        var apple = ["摩斯漢堡", [["21世紀風味館", "肯德基", "必勝客"], ["麥當勞", "樂檸漢堡"]]]
+        console.log(apple[1][1][1]);//樂檸漢堡
+
+        console.log(apple.bee);//意思: 取得apple物件的bee屬性值
+        console.log(apple['bee']);//意思: 取得apple物件的bee屬性值
+        apple(bee);//意思: "apple方法/函式  呼叫/執行 呼叫apple函式的時候傳入bee變數資料"
+        function apple(bee) { };//意思: 宣告定義一個函式叫apple，裡面有個bee參數。參數=> 提示使用者在使用函式的時候需要傳入的資料
+
+
+    </script>
+
+</body>
+
+</html>

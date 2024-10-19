@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <h1 id="cat"></h1>
+    <script>
+        var food = ["麻油雞麵線","珍奶","打鐵豆花","大麥克","麻辣鍋"];
+        var y=Math.floor(Math.random()*food.length);
+        
+        var weather = ["很冷","很熱"];
+        var z=Math.floor(Math.random()*weather.length);
+        
+        var meal = ["早餐", "午餐", "晚餐"];
+        var x = Math.floor(Math.random() * 3);
+        var msg3 = `3. 今天天氣${weather[z]}，我想吃${food[y]}當${meal[x]}`;
+        document.getElementById('cat').innerText = msg3;
+    </script>
+</body>
+
+</html>

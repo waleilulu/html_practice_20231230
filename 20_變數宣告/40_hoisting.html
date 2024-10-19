@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <h4>Hoisting is JavaScript's default behavior of moving declarations to the top.</h4>
+    <p>JavaScript Hoisting：<a href="https://www.w3schools.com/js/js_hoisting.asp">https://www.w3schools.com/js/js_hoisting.asp</a></p>
+
+    <pre>
+        訊息選項：
+        (A). ReferenceError: 變數名稱 is not defined
+        (B). ReferenceError: Cannot access 變數名稱 before initialization 
+        (C). 主控台顯示: undefined 
+        (D). 主控台顯示: 指定數值 
+    </pre>
+
+    <script>
+
+        // 10. 測試變數的宣告和使用
+        console.log(apple);
+        var apple=100
+        // (C). console變成undefine
+        
+        
+        // let 和 const 聲明也會被提升，但它們不像 var 那樣被初始化為 undefined。相反，它們處於“暫時死區”，直到代碼中達到實際聲明的位置。
+        console.log(apple);
+        let apple=100
+
+
+        
+ 
+    </script>
+</body>
+
+</html>

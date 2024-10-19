@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 10. 製作一份表單-->
+    <!--   a. 標題：通勤工具使用調查-->
+    <!--   b. 在<body>裡面放入一個表單<form>-->
+    <!--   c. 在<form>表單內 加入 <fieldset> 群組標籤 和 <legend> 並給予說明-->
+    <!--   d. 在表單<form>內加入 姓名 輸入欄位<input type="text">-->
+    <!--   e. 在表單<form>內加入 電話 輸入欄位<input type="text">-->
+    <h1>通勤工具使用調查</h1>
+    <form>
+        <fieldset>
+            <legend>基本資料</legend>
+            <label for="apple">姓名</label>
+            <input id=apple type="text">
+            <br>
+            <label for="">電話</label>
+            <input type="tel" pattern="\d{4}-\d{3}-\d{3}">
+        </fieldset>
+
+        <!-- 20. 加入 職業 <input type="radio">-->
+        <!--  id：識別某個HTML文件上的元素-->
+        <!--  class：HTML標籤的分組-->
+        <!--  name：為radio、checkbox的分組；伺服器端根據name取得值-->
+        職業
+        <input type="radio" name="job" id="studnet"> <label for="studnet"></label>學生
+        <input type="radio" name="job" id="teacher"> <label for="teacher"></label>老師
+        <input type="radio" name="job" id="other"> <label for="other"></label>其他
+        
+        <br>
+
+        <!-- 30. 加入 年紀 <input type="radio">、 交通工具 <input type="checkbox"> ，步驟和 20 類似 -->
+        年紀
+        <input type="radio" name="age" id="age20s"> <label for="age20s"></label>20-29
+        <input type="radio" name="age" id="age30s"> <label for="age30s"></label>30-39
+        <input type="radio" name="age" id="age40s"> <label for="age40s"></label>40-49
+        <input type="radio" name="age" id="age50s"> <label for="age50s"></label>50以上
+
+        <br>
+
+        交通工具
+        <input type="checkbox" name="tool" id="bike"> <label for="bike"></label>腳踏車
+        <input type="checkbox" name="tool" id="scooter"> <label for="scooter"></label>機車
+        <input type="checkbox" name="tool" id="boat"> <label for="boat"></label>船
+        <input type="checkbox" name="tool" id="others"> <label for="others"></label>其他
+        
+        <br>
+
+        <input type="submit"  value="提交">
+
+    </form>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

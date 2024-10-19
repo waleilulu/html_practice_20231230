@@ -1,0 +1,150 @@
+-- 建立資料庫 ECommerceDB
+CREATE DATABASE ECommerceDB;
+
+-- 使用 ECommerceDB 資料庫
+USE ECommerceDB;
+
+-- 建立 Categories 表格
+CREATE TABLE Categories (
+    CategoryID INT PRIMARY KEY,
+    CategoryName NVARCHAR(100)
+);
+
+-- 插入測試資料至 Categories 表格
+INSERT INTO Categories (CategoryID, CategoryName) VALUES 
+(1, '沙發/桌子/椅子'),
+(2, '五斗櫃/鞋櫃/書櫃/邊桌'),
+(3, '床具'),
+(4, '照明/家居紡織品/家居裝飾'),
+(5, '衛浴用品');
+
+-- 建立 Suppliers 表格
+CREATE TABLE Suppliers (
+    SupplierID INT PRIMARY KEY IDENTITY(1,1),
+    CompanyName NVARCHAR(100),
+    ContactName NVARCHAR(100),
+    Phone NVARCHAR(20),
+    Email NVARCHAR(100)
+);
+
+-- 插入測試資料至 Suppliers 表格
+INSERT INTO Suppliers (CompanyName, ContactName, Phone, Email) VALUES
+(N'AA股份有限公司', N'張小明', N'0912345678', N'supplierA@abc.com'),
+(N'BB股份有限公司', N'李小華', N'0923456789', N'supplierB@def.com'),
+(N'CC股份有限公司', N'王大力', N'0934567890', N'supplierC@xyz.com');
+
+-- 建立 Products 表格
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName NVARCHAR(100),
+    SupplierID INT,
+    CategoryID INT,
+    UnitPrice INT,
+    UnitInStock INT,
+    Image1 NVARCHAR(100),
+    Image2 NVARCHAR(100),
+    Image3 NVARCHAR(100),
+    Color1 NVARCHAR(20),
+    Color2 NVARCHAR(20),
+    Color3 NVARCHAR(20),
+    Color4 NVARCHAR(20),
+    Color5 NVARCHAR(20),
+    Length NVARCHAR(10),
+    Width NVARCHAR(10),
+    Height NVARCHAR(10),
+    SpecialZoneType NVARCHAR(20),
+    CONSTRAINT FK_Products_Categories FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID),
+    CONSTRAINT FK_Products_Suppliers FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID)
+);
+
+-- 插入測試資料至 Products 表格
+-- 插入第一個產品的資訊
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitInStock, Image1, Color1, Color2, Color3, Color4, Color5, Length, Width, Height)
+VALUES (1, N'皮質沙發', 1, 1, 1500, 20, N'sofa_image1.jpg', N'棕色', N'灰色', N'白色', N'紅色', N'綠色', N'200', N'100', N'80');
+
+-- 插入第二個產品的資訊
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitInStock, Image1, Image2, Color1, Length, Width, Height, SpecialZoneType)
+VALUES (2, N'木質餐桌', 1, 1, 800, 15, N'table_image1.jpg', N'table_image2.jpg', N'棕色', N'150', N'90', N'75', N'出清');
+
+
+-- 插入第三個產品的資訊
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitInStock, Image1, Image2, Image3, Color1, Color2, Length, Width, Height, SpecialZoneType)
+VALUES (3, N'布質扶手椅', 1, 1, 600, 10, N'chair_image1.jpg', N'chair_image2.jpg', N'chair_image3.jpg', N'藍色', N'綠色', N'90', N'80', N'100', N'新品');
+
+-- 插入第四個產品的資訊
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitInStock, Image1, Color1, Color2, Color3, Length, Width, Height)
+VALUES (4, N'辦公桌', 1, 1, 1200, 12, N'desk_image1.jpg', N'白色', N'黑色', N'灰色', N'120', N'60', N'75');
+
+-- 插入第五個產品的資訊
+INSERT INTO Products (ProductID, ProductName, SupplierID, CategoryID, UnitPrice, UnitInStock, Image1, Image2, Image3, Color1, Length, Width, Height, SpecialZoneType)
+VALUES (5, N'床頭櫃', 2, 2, 300, 25, N'table_image1.jpg', N'table_image2.jpg', N'table_image3.jpg', N'黑色', N'50', N'40', N'60', N'出清');
+
+
+-- 建立 Customers 表格
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName NVARCHAR(50),
+    DateOfBirth DATE,
+    Gender NVARCHAR(10),
+    MobilePhoneNumber NVARCHAR(20),
+    Email NVARCHAR(100),
+    Address_City NVARCHAR(50),
+    Address_Dist NVARCHAR(50),
+    Address NVARCHAR(255),
+    Username NVARCHAR(50),
+    Password NVARCHAR(50)
+);
+
+-- 插入測試資料至 Customers 表格
+INSERT INTO Customers (CustomerID, CustomerName, DateOfBirth, Gender, MobilePhoneNumber, Email, Address_City, Address_Dist, Address, Username, Password)
+VALUES 
+(1, N'湯子同', '1990-01-01', N'男', '09123456789', 'zhangsan@gmail.com', N'台北市', N'大安區', N'信義路150號', 'zhangsan', 'abc123'),
+(2, N'李珊妮', '1985-02-15', N'女', '09234567891', 'lisi@gmail.com', N'新北市', N'中和區', N'中正路200號', 'lisi', 'def456'),
+(3, N'王小虎', '1995-03-20', N'男', '09345678912', 'wangwu@gmail.com', N'桃園市', N'龜山區', N'文化路300號', 'wangwu', 'ghi789');
+
+
+-- 建立 Orders 表格
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATETIME,
+    TotalAmount INT, 
+    PaymentMethod NVARCHAR(50), -- 新增 PaymentMethod 欄位
+    Carrier NVARCHAR(50), -- 新增 Carrier 欄位
+    ShippingDate DATETIME, -- 新增 ShippingDate 欄位
+    ShippingAddress NVARCHAR(100), -- 新增 ShippingAddress 欄位
+
+    CONSTRAINT FK_Orders_Customers FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+
+-- 插入測試資料至 Orders 表格
+INSERT INTO Orders (OrderID, CustomerID, OrderDate, TotalAmount, PaymentMethod, Carrier, ShippingDate, ShippingAddress) VALUES
+(1, 3, '2024-02-25', 2400, N'信用卡', N'自行送貨', '2024-02-26', N'桃園市龜山區文化路300號'),
+(2, 1, '2024-02-23', 3000, N'信用卡', N'大榮貨運', '2024-02-24', N'台北市大安區信義路150號'),
+(3, 2, '2024-02-24', 1500, N'轉帳', N'新竹貨運', '2024-02-25', N'新北市中和區中正路200號');
+
+
+-- 建立 OrderDetails 表格
+CREATE TABLE OrderDetails (
+    OrderID INT,
+    ProductID INT,
+    Quantity INT,
+    UnitPrice INT,
+    Discount DECIMAL(3, 2),
+    Amount AS (Quantity * UnitPrice * Discount), -- 計算欄位
+    PRIMARY KEY (OrderID, ProductID),
+    CONSTRAINT FK_OrderDetails_Orders FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+    CONSTRAINT FK_OrderDetails_Products FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+-- 插入測試資料至 OrderDetails 表格
+INSERT INTO OrderDetails (OrderID, ProductID, Quantity, UnitPrice, Discount) VALUES 
+(1, 1, 2, 1500, 1),
+(1, 2, 1, 800, 0.5),
+(2, 3, 3, 600, 1),
+(3, 4, 1, 1200, 1),
+(3, 5, 2, 300, 0.95);
+
+
+

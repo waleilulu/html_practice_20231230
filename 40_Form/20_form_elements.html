@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <!-- 10. 請參考文件測試底下標籤，並試著舉例使用情境 -->
+    <!--    a. <select> 和 <datalist> -->
+    select: 固定選單
+    datalist: 可以自己輸入字去找選單上相關的字做選取，亦可以當選單去選，若沒有選項可選可以自己輸入
+    <!--    b. <optgroup> 和 <option> -->
+        optgroup:分組用，不可被選取
+        option: 選單/選項/選目/清單 本人
+    <hr>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+
+    <hr>
+
+    <label for="apple">Choose your browser from the list:</label>
+    <input list="dog" name="apple" id="apple">
+    <datalist id="dog">
+        <option value="Edge">
+        <option value="Firefox">
+        <option value="Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+
+    <hr>
+
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="cars">
+        <optgroup label="Swedish Cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+        </optgroup>
+        <optgroup label="German Cars">
+            <option value="mercedes">Mercedes</option>
+            <option value="audi">Audi</option>
+        </optgroup>
+    </select>
+
+</body>
+
+</html>
